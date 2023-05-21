@@ -1,30 +1,42 @@
 "use client"
 import { Input } from 'antd'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './header.scss'
-import { MenuOutlined, SearchOutlined } from '@ant-design/icons'
+import { CloseOutlined, MenuOutlined, SearchOutlined } from '@ant-design/icons'
 
 const Header = () => {
+  const [mobileMenu,setMobilMenu] = useState(false)
+
+  // useEffect(()=>{
+  //   const body = document.getElementsByTagName("body")
+  //   if (!mobileMenu) {
+  //     body.style.overflow = "scroll"
+  //   }else {
+  //     body.style.overflow = "hidden"
+  //   }
+  // },[mobileMenu])
+  
   return (
     
-    <header className='header'>
-        <div className='header__logo'>
+    <header className={`header${mobileMenu ? "--active" :""}`}>
+        <div className={`header${mobileMenu ? "--active" :""}__logo`}>
             <Link href="/">
                 BLOG
             </Link>
         </div>
-        <div className='header__nav'>
+        <div className={`header${mobileMenu ? "--active" :""}__nav`}>
             <Link href="/">Home</Link>
             <Link href="/blogs">Blogs</Link>
-            <Link href="/about">About</Link>
             <Link href="/contact">Contact</Link>
         </div>
-        <div className='header__search-bar'>
+        <div className={`header${mobileMenu ? "--active" :""}__search-bar`}>
         <Input placeholder="Search..." suffix={<SearchOutlined />} />
         </div>
-        <div className='header__hamburger'>
-        <MenuOutlined />
+        <div onClick={()=>setMobilMenu(!mobileMenu)} className={`header${mobileMenu ? "--active" :""}__hamburger`}>
+        
+        {mobileMenu ? <CloseOutlined /> : <MenuOutlined /> }
+        
         </div>
     </header>
   )
