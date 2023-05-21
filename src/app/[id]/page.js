@@ -12,7 +12,7 @@ const Blog = ({ params }) => {
 
   return (
     <>
-    <div className="container--blog">
+    <div className="container--sm">
         <div className="single-blog">
           <div className="single-blog__badge">
             <Badge size="big" category={findBlogById?.category}>

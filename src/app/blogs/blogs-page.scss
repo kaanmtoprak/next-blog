@@ -1,0 +1,60 @@
+@import '../../assets/styles/Settings/screens.scss';
+
+
+.blogs-page {
+    margin: 20px 0;
+    &__header {
+        position: relative;
+        &__image {
+            max-width: 1216px;
+            img {
+                width: 100%;
+                border-radius: 12px;
+            }
+        }
+        &__card {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: absolute;
+            max-width: 750px;
+            margin: 30px;
+            bottom: 0;
+            @include tablet {
+                margin: 20px;
+            }
+            @include phone {
+                margin: 10px;
+                gap: 5px;
+            }
+
+            .text {
+                
+                &--h1{
+                    @include tablet {
+                        font-size: 25px;
+                    }
+                    @include phone {
+                        font-size: 16px;
+                        line-height: 25px;
+                    }
+                }
+            }
+
+            &__author {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 5px;
+                .text {
+                    &--base {
+                        @include phone {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

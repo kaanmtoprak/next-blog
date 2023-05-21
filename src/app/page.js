@@ -11,7 +11,7 @@ export default function Home() {
     <main >
         <Banner/>
         <Ads/>
-        <Blogs/>
+        <Blogs index/>
     </main>
   )
 }

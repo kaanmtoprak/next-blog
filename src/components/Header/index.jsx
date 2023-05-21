@@ -10,9 +10,9 @@ const Header = () => {
     
     <header className='header'>
         <div className='header__logo'>
-            <span>
+            <Link href="/">
                 BLOG
-            </span>
+            </Link>
         </div>
         <div className='header__nav'>
             <Link href="/">Home</Link>

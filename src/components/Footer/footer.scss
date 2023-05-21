@@ -11,15 +11,19 @@
             display: grid;
             grid-template-columns: 3fr 5fr 4fr;
             gap: 10px;
-            height: calc(500px - 246px);
+            height: auto;
             padding: 64px 0;
+            @include tablet {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4fr , 100px);
+                gap: 40px;
+            }
             @include phone {
-                grid-template-columns: 12fr;
+                grid-template-columns: 1fr;
                 grid-template-rows: repeat(3fr , 100px);
-                height: calc(100% - 181px);
             }
             &__about {
-
+                margin: 40px;
                 >p {
                     margin: 12px 0 24px 0;
                 }
@@ -82,12 +86,27 @@
             grid-area: down;
             height: 118px;
             @include flex-space-between;
-            a {
-                color: $dark-03;
-                + a {
-                    margin-left: 20px;
+            small {
+                @include phone {
+                    font-size: 12px;
                 }
             }
+            &__right {
+                display: flex;
+                a {
+                    color: $dark-03;
+                    @include phone {
+                        font-size: 12px;
+                    }
+                    + a {
+                        margin-left: 20px;
+                        @include phone {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+
                 
     
         }

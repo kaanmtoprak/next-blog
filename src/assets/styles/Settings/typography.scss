@@ -52,7 +52,9 @@
         line-height: 24px;
         font-weight: 600;
     }
-
+    &--white {
+        color: $white;
+    }
     &--dark-02 {
         color: $dark-02;
     }
@@ -62,5 +64,6 @@
     &--dark-04 {
         color: $dark-04;
     }
+    
 
 }

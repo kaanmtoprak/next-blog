@@ -13,6 +13,9 @@
     &__logo {
         font-size: 40px;
         font-weight: 700;
+        a {
+            color: $dark-01;
+        }
     }
     &__nav {
      a {
