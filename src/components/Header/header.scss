@@ -1,0 +1,49 @@
+@import '../../assets/styles/Settings/mixins.scss';
+@import '../../assets/styles/Settings/colors.scss';
+@import '../../assets/styles/Settings/screens.scss';
+
+.header {
+    @include flex-space-between;
+    @include tablet {
+        max-width: calc(100% - 100px);   
+    }
+    @include phone {
+        max-width: calc(100% - 80px);   
+    }
+    &__logo {
+        font-size: 40px;
+        font-weight: 700;
+    }
+    &__nav {
+     a {
+        font-size: 16px;
+        line-height: 24px;
+        color: $dark-01;
+        + a {
+            margin-left: 20px;
+        }
+    }
+    @include phone {
+        display: none;
+    }
+    }
+    &__search-bar {
+        span {
+            border: none;
+            background-color: $grey;
+            input {
+                background-color: $grey;
+            }
+        }
+        @include phone {
+            display: none;
+        }
+    }
+    &__hamburger {
+        display: none;
+        font-size: 30px;
+        @include phone {
+            display: block;
+        }
+    }
+}

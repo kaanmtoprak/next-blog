@@ -1,0 +1,66 @@
+@import '../Settings/colors.scss';
+
+.text {
+    &--h1 {
+        font-size: 36px;
+        line-height: 40px;
+        font-weight: 600;
+    }
+    &--h3--bold {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 600;
+    }
+    &--h3--700 {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 700;
+    }
+    &--h4 {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+    }
+    &--sm--300 {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+    }
+    &--sm--400 {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+    &--lg--400 {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 400;
+    }
+    &--lg--600 {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 600;
+    }
+
+    &--base {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+    &--base-bold {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+    }
+
+    &--dark-02 {
+        color: $dark-02;
+    }
+    &--dark-03 {
+        color: $dark-03;
+    }
+    &--dark-04 {
+        color: $dark-04;
+    }
+
+}

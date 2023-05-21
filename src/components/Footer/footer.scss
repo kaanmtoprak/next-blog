@@ -1,0 +1,95 @@
+@import '../../assets/styles/Settings/mixins.scss';
+@import '../../assets/styles/Settings/colors.scss';
+@import '../../assets/styles/Settings/screens.scss';
+
+.footer {
+    display: grid;
+    grid-template-areas: 'up' 'down';
+    >.container {
+        .footer__up {
+            grid-area: up;
+            display: grid;
+            grid-template-columns: 3fr 5fr 4fr;
+            gap: 10px;
+            height: calc(500px - 246px);
+            padding: 64px 0;
+            @include phone {
+                grid-template-columns: 12fr;
+                grid-template-rows: repeat(3fr , 100px);
+                height: calc(100% - 181px);
+            }
+            &__about {
+
+                >p {
+                    margin: 12px 0 24px 0;
+                }
+                span {
+                    display: flex;
+                    +span {
+                        margin-top: 4px;
+                    }
+                }
+            }
+            &__links {
+                display: flex;
+                justify-content: space-around;
+                
+                &__quick-links {
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 12px;
+                        a {
+                            color: $dark-03;
+                            +a {
+                                margin-top: 14px;
+                            }
+                        }
+                    }
+                }
+                &__categories {
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 12px;
+                        a {
+                            color: $dark-03;
+                            +a {
+                                margin-top: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            &__newsletter {
+                background-color: $white;
+                border-radius: 12px;
+                >div {
+                    padding: 32px 36px;
+                    text-align: center;
+                    >span {
+                        margin-bottom: 8px;
+                    }
+                    p {
+                        margin-top: 8px;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+        }
+        .footer__down {
+            grid-area: down;
+            height: 118px;
+            @include flex-space-between;
+            a {
+                color: $dark-03;
+                + a {
+                    margin-left: 20px;
+                }
+            }
+                
+    
+        }
+    }
+}

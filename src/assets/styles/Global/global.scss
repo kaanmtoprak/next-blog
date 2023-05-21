@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "../Settings/colors";
+@import "../Settings/mixins";
+@import "../Settings/screens";
+@import "../Settings/typography";
+
+html, body {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  font-variant: normal;
+
+  * {
+    font-variant: normal;
+    font-variant-numeric: normal;
+  }
+}
+
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+
+  &.overflow {
+    overflow: hidden;
+  }
+
+}
+
+.container {
+  width: 100%;
+  max-width: 1248px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media screen and (min-width: 768px) and (max-width: 1248px) {
+    padding: 0 60px;
+  }
+
+  @include phone {
+    padding: 0 24px;
+  }
+
+  &--blog {
+    max-width: 800px;
+    margin: 0 auto;
+
+  }
+}
+
+#root {
+  width: 100%;
+  min-height: 100%;
+  //overflow-x: hidden;
+}
+
+figure, ul, li, h1,h2,h3,h4,h5,h6, p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+
+.ant-form-item-explain-error {
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+.mt-10 {
+  margin-top: 10px !important;
+}
+
+small {
+  font-size: 100%;
+}
+
+.flex-center-start {
+  @include flex-center-start;
+}
+.flex-center-end {
+  width: 100%;
+  @include flex-center-end;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text__title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.block {
+  display: block;
+}
+
+.grid-left {
+  text-align: left;
+}
+
+.grid-center {
+  text-align: center;
+}
+
+.grid-right {
+  text-align: right;
+
+  @include phone {
+    text-align: inherit;
+  }
+}
+
+.ant-row + .ant-row {
+  margin-top: 60px;
+}
+
+

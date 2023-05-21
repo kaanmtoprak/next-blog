@@ -1,0 +1,28 @@
+@import '../../assets/styles/Settings/colors.scss';
+@import '../../assets/styles/Settings/screens.scss';
+.ads {
+    width: 100%;
+    margin: 140px 0;
+    @include phone {
+        margin-bottom: 50px ;
+    }
+    
+    >div {
+        width: 750px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        background-color: $grey-02;
+        text-align: center;
+        border-radius: 12px;
+        @include tablet {
+            width: 600px;
+        }
+        @include phone {
+            width: calc(100% - 50px);
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@import '../../assets/styles/Settings/screens.scss';
+.blogs {
+    margin-bottom: 100px;
+    &__header {
+        margin: 32px 10px ;
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr );
+        row-gap: 20px;
+        justify-items: center;
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr );
+        }
+        @include phone {
+            grid-template-columns: repeat(1, 1fr );
+        }
+    }
+}

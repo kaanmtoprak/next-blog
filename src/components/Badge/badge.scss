@@ -1,0 +1,34 @@
+@import '../../assets/styles/Settings/colors.scss';
+.badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--big {
+        width: 88px;
+        height: 20px;
+        padding: 4px 10px;
+        color: $white;
+        border-radius: 6px; 
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+    }
+    &--blue {
+        background: #4B6BFB;
+    }
+    &--red {
+        background: red;
+    }
+    &--yellow {
+        background: rgb(255, 206, 11);
+    }
+    &--green {
+        background: rgb(87, 161, 13);
+    }
+    &--purple {
+        background: rgb(123, 21, 161);
+    }
+    &--orange {
+        background: rgb(236, 113, 12);
+    }
+}

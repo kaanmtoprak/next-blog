@@ -1,0 +1,38 @@
+$phone-max: 767.8px;
+$phone-min: 768px;
+$phone-xs: 540px;
+$tablet-max: 1248px;
+$desktop-min: 1248.5px;
+
+
+@mixin phone {
+  @media screen and (max-width: $phone-max) {
+    @content
+  }
+}
+@mixin phone-xs {
+  @media screen and (max-width: $phone-xs) {
+    @content
+  }
+}
+
+@mixin phone-min {
+  @media screen and (min-width: $phone-min) {
+    @content
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: $phone-min) and (max-width: $tablet-max){
+    @content
+  }
+}
+@mixin tablet-min {
+  @media screen and (max-width: ($tablet-max - 1)) {
+    @content
+  }
+}
+@mixin desktop {
+    @media screen and (min-width: $desktop-min) {
+      @content
+    }
+  }

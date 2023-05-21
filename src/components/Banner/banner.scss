@@ -1,0 +1,14 @@
+.banner {
+    &__image {
+        max-width: 1248px;
+        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__card {
+        position: relative;
+
+    }
+}
